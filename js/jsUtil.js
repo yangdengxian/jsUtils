@@ -217,6 +217,12 @@ Ydx_JsUtil.sortedKeys = function(obj) {
   }
   return keys.sort();
 };
+/**
+ * 判断属性是否存在原型中 返回true表示在原型中
+ */
+Ydx_JsUtil.hasPrototypeProperty = function(object,name) {
+  return !object.hasOwnProperty(name) && (name in object);
+};
 //test nodeJS
 console.log(Ydx_JsUtil.forEach({d:2,b:1,c:4,a:3}));
 
